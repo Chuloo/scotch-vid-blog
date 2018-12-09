@@ -1,0 +1,19 @@
+.nav{
+    background: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1% 0;
+}
+.child{
+    width: 60%;
+    margin: 0 auto;
+    max-width: 1000px;
+    margin-top: 2%;
+}
+h1{
+    margin: 0;
+    padding: 0;
+}

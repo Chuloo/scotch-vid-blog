@@ -1,0 +1,29 @@
+{
+  "name": "gatsby-starter-hello-world",
+  "description": "Gatsby hello world starter",
+  "license": "MIT",
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "npm run develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "debug": "rm -r .cache/ ; env 'NODE_ENV=development' 'DEBUG=gatsby:query-watcher' npm run develop"
+  },
+  "dependencies": {
+    "@mdx-js/mdx": "^0.15.5",
+    "@mdx-js/tag": "^0.16.1",
+    "cloudinary-core": "^2.5.0",
+    "cloudinary-video-player": "^1.1.1",
+    "gatsby": "^2.0.33",
+    "gatsby-mdx": "^0.2.0",
+    "gatsby-plugin-typography": "^2.2.2",
+    "gatsby-source-filesystem": "^2.0.11",
+    "jquery": "^3.3.1",
+    "lodash": "^4.17.11",
+    "react": "^16.5.1",
+    "react-dom": "^16.5.1",
+    "react-typography": "^0.16.13",
+    "typography": "^0.16.18",
+    "typography-theme-bootstrap": "^0.16.18"
+  }
+}
