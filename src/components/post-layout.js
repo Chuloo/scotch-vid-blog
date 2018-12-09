@@ -53,15 +53,15 @@ export default ({data}) => {
                 </header>
             
                 <div>
-                    {/* <MDXRenderer>{post.code.body}</MDXRenderer>  */}
+                  <MDXRenderer>{data.mdx.code.body}</MDXRenderer>
                 </div>
             </div>
         </Layout>
     )
 }
 
-export const query = graphql`
-    query PostQuery($postRoute: String!) {
+export const pageQuery = graphql`
+    query ($postRoute: String!) {
         mdx(fields: {route: {eq: $postRoute}}){
                 frontmatter{
                     title
