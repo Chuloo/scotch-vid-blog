@@ -7,7 +7,6 @@ exports.onCreateNode = ({node, getNode, actions}) =>{
     const {createNodeField} = actions
     if (node.internal.type === 'Mdx') {
         const route = createFilePath({node, getNode, basePath:'posts'})
-        console.log(route)
         createNodeField({
             node,
             name: 'route',
@@ -51,7 +50,6 @@ exports.createPages = ({ graphql, actions }) => {
         }
 
         result.data.allMdx.edges.forEach(({ node }) => {
-            console.log(node)
           createPage({
             path: node.fields.route,
             component: componentWithMDXScope(
@@ -68,3 +66,11 @@ exports.createPages = ({ graphql, actions }) => {
     );
   });
 };
+
+exports.onCreateWebpackConfig = ({ actions }) => {
+  actions.setWebpackConfig({
+    resolve: {
+      modules: [path.resolve(__dirname, 'src'), 'node_modules'],
+    },
+  })
+}

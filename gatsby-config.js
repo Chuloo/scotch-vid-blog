@@ -3,6 +3,7 @@ module.exports ={
         title: `Scotchy-Vid-Blog`,
       },
     plugins:[
+        `gatsby-plugin-react-helmet`,
         {
             resolve: `gatsby-source-filesystem`,
             options: {

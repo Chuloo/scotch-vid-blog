@@ -2,7 +2,8 @@ import React from "react"
 import Layout from '../components/layout'
 import './index.css'
 import { graphql, Link } from "gatsby";
-import { node } from "prop-types";
+import VideoPlayer from "../components/VideoPlayer"
+// import { node } from "prop-types";
 
 export default ({data}) => {
     const posts = data.allMdx.edges
@@ -14,8 +15,8 @@ export default ({data}) => {
                     <h2>Let's place video memes here!</h2>
                 </header>
                 <div>
-                    {posts.map(({node})=> (
-                        <Link to={node.fields.route} style={{textDecoration:'none', color:  'inherit'}}>
+                    {posts.map(({node}, index)=> (
+                        <Link to={node.fields.route} style={{textDecoration:'none', color:  'inherit'}} key={index}>
                             <div className="post-item">
                                 <h3 className="post-title">{node.frontmatter.title}</h3>
                                 <p className="post-excerpt">{node.excerpt}</p>
