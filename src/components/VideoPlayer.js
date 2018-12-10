@@ -1,12 +1,20 @@
 import React from "react";
 import "lodash/lodash.js";
 import cloudinary from "cloudinary-core";
-import "cloudinary-video-player/dist/cld-video-player.js"
+// import "cloudinary-video-player/dist/cld-video-player.js"
+import "cloudinary-video-player/dist/cld-video-player.min.js"
 import "cloudinary-video-player/dist/cld-video-player.min.css"
 import "jquery/dist/jquery.js"
 import './videoplayer.css'
+import Helmet from "react-helmet"
 
 class VideoPlayer extends React.Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            loaded: false
+        }
+    }
 
     componentDidMount(){
         const {publicID, title, subtitle, muted} = this.props
@@ -23,10 +31,13 @@ class VideoPlayer extends React.Component {
     render(){
         return (
             <div className="video-player">
-                <video 
-                    autoPlay
-                    id="cl-vp">
-                </video>
+            {/* <Helmet>
+                <script src="https://unpkg.com/cloudinary-video-player/dist/cld-video-player.js" type="text/javascript"></script>
+            </Helmet> */}
+                    <video 
+                        autoPlay
+                        id="cl-vp">
+                    </video>
             </div>
             
         )
