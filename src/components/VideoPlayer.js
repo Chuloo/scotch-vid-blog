@@ -1,8 +1,7 @@
 import React from "react";
 import "lodash/lodash.js";
 import cloudinary from "cloudinary-core";
-// import "cloudinary-video-player/dist/cld-video-player.js"
-import "cloudinary-video-player/dist/cld-video-player.min.js"
+import "cloudinary-video-player/dist/cld-video-player.js"
 import "cloudinary-video-player/dist/cld-video-player.min.css"
 import "jquery/dist/jquery.js"
 import './videoplayer.css'
@@ -21,7 +20,7 @@ class VideoPlayer extends React.Component {
 
         let cl = cloudinary.Cloudinary.new({cloud_name: "chuloo", secure: true})
         let videoPlayer = cl.videoPlayer('cl-vp',{
-            loop: false,
+            loop: true,
             controls: true,
             muted: muted ? true : false,
         })
@@ -31,9 +30,6 @@ class VideoPlayer extends React.Component {
     render(){
         return (
             <div className="video-player">
-            {/* <Helmet>
-                <script src="https://unpkg.com/cloudinary-video-player/dist/cld-video-player.js" type="text/javascript"></script>
-            </Helmet> */}
                     <video 
                         autoPlay
                         id="cl-vp">
