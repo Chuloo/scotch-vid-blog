@@ -80,10 +80,6 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
           {
             test: /cld-video-player/,
             use: loaders.null()
-          },
-          {
-            test: /cloudinary-video-player/,
-            use: loaders.null()
           }
         ]
       }

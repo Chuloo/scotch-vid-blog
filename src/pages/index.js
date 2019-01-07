@@ -2,12 +2,9 @@ import React from "react"
 import Layout from '../components/layout'
 import './index.css'
 import { graphql, Link } from "gatsby";
-import VideoPlayer from "../components/VideoPlayer"
-// import { node } from "prop-types";
 
 export default ({data}) => {
     const posts = data.allMdx.edges
-    // console.log(posts)
     return (
         <Layout>
             <div>

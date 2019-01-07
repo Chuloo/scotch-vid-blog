@@ -5,20 +5,13 @@ import "cloudinary-video-player/dist/cld-video-player.js"
 import "cloudinary-video-player/dist/cld-video-player.min.css"
 import "jquery/dist/jquery.js"
 import './videoplayer.css'
-import Helmet from "react-helmet"
 
 class VideoPlayer extends React.Component {
-    constructor(props){
-        super(props);
-        this.state = {
-            loaded: false
-        }
-    }
-
     componentDidMount(){
         const {publicID, title, subtitle, muted} = this.props
+        const cloudName = "INSERT CLOUD NAME";
 
-        let cl = cloudinary.Cloudinary.new({cloud_name: "chuloo", secure: true})
+        let cl = cloudinary.Cloudinary.new({cloud_name: cloudName, secure: true})
         let videoPlayer = cl.videoPlayer('cl-vp',{
             loop: true,
             controls: true,

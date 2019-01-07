@@ -1,9 +1,8 @@
-module.exports ={
+module.exports = {
     siteMetadata: {
         title: `Scotchy-Vid-Blog`,
       },
     plugins:[
-        `gatsby-plugin-react-helmet`,
         {
             resolve: `gatsby-source-filesystem`,
             options: {
