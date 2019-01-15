@@ -9,7 +9,7 @@ import './videoplayer.css'
 class VideoPlayer extends React.Component {
     componentDidMount(){
         const {publicID, title, subtitle, muted} = this.props
-        const cloudName = "INSERT CLOUD NAME";
+        const cloudName = "chuloo";
 
         let cl = cloudinary.Cloudinary.new({cloud_name: cloudName, secure: true})
         let videoPlayer = cl.videoPlayer('cl-vp',{
